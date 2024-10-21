@@ -1,0 +1,13 @@
+name: tilelowrank
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.12
+  - numpy
+  - scipy
+  - mpi4py
+  - matplotlib
+  - ipython
+  - jupyter
+  - pip

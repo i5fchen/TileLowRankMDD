@@ -1,0 +1,39 @@
+[build-system]
+requires = [
+    "setuptools >= 65",
+    "setuptools_scm[toml]",
+    "wheel",
+]
+
+[project]
+name = "tilelowrankmdd"
+authors = [
+    {name = "Fuqiang Chen", email = "fuqiang.chen@kaust.edu.sa"},
+]
+description = "Codes to solve inverse problems, such as multidimensional deconvolution, utilizing regularization techniques based on reciprocity-aware tile low-rank factorization"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["local low-rank representation", "inverse problem", "multidimensional deconvolution", ]
+license = {text = "BSD 3-Clause License"}
+classifiers = [
+        "Intended Audience :: Science/Research",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Topic :: Scientific/Engineering :: Mathematics",
+    ]
+dependencies = [
+        "numpy >= 1.15.0",
+        "matplotlib",
+        "mpi4py",
+    ]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+mpi = [
+    "cupy",
+]
+
+[tool.setuptools.packages]
+find = {}
+
